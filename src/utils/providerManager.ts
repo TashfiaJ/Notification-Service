@@ -20,7 +20,7 @@ export class ProviderManager {
     if (providers.length === 0) throw new Error(`No providers available for ${type}`);
 
     const index = type === "sms" ? this.smsIndex++ : this.emailIndex++;
-    return providers[index % providers.length]; // Round-Robin selection
+    return providers[index % providers.length];
   }
 }
 
